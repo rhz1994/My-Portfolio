@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#34251a" />
+    <meta name="robots" content="index, follow" />
+    <title>Rasmus Hanzén — Personligt brev</title>
+    <link id="app-favicon" rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any" />
+    <script>
+      (function () {
+        var el = document.getElementById('app-favicon');
+        if (!el) return;
+        var path = location.pathname;
+        var last = path.split('/').pop() || '';
+        var looksLikeFile = /\.[a-z0-9]{1,8}$/i.test(last);
+        var base = location.href;
+        if (!path.endsWith('/') && !looksLikeFile) {
+          base = location.origin + path + '/' + location.search + location.hash;
+        }
+        el.setAttribute('href', new URL('assets/favicon.svg', base).href);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cv-page.css" />
+    <script data-goatcounter="https://rhz1994.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </head>
+  <body class="cv-standalone-page">
+    <main class="cv-standalone-main">
+      <div class="cv-top-bar">
+        <a class="cv-back" href="index.html#personligt-brev">Till portfolio</a>
+        <a class="btn btn-primary" href="assets/personligt-brev.pdf" download>Ladda ner</a>
+      </div>
+
+      <article class="cv-sheet doc-panel">
+        <header class="cover-letter-doc-head">
+          <h1 class="cv-name">Personligt brev</h1>
+          <p class="cover-letter-top">Trollhättan</p>
+        </header>
+
+        <div class="cover-letter-body">
+          <p class="cover-salutation">Hej,</p>
+          <p>
+            Mitt namn är Rasmus Hanzén och jag avslutar just nu min utbildning till Fullstack Javascriptutvecklare på
+            IT-Högskolan, med examen 2026. Jag söker en tjänst där jag kan bidra med mina tekniska kunskaper och
+            fortsätta växa som utvecklare.
+          </p>
+          <p>
+            Jag har en gedigen grund i modern webbutveckling och är van att arbeta i hela stacken – från databasdesign
+            och backend-API:er i Node.js/Express till frontend i React och Vue.js. Jag behärskar JavaScript,
+            TypeScript, HTML, CSS och SQL, och arbetar strukturerat med Git och Scrum. Jag har även varit delaktig i
+            UX-processer och skapat designer från grunden i Figma.
+          </p>
+          <p>
+            Det är helhetsförståelsen jag värdesätter mest. Att kunna följa en lösning hela vägen – från hur data lagras
+            i backend till hur den presenteras och upplevs av slutanvändaren – gör det möjligt att fatta bättre beslut i
+            varje del av kedjan.
+          </p>
+          <p>
+            Under min LIA-period hos WallmanderCo (höst 2025 samt hela våren 2026) fick jag ta stort ansvar för egna
+            projekt direkt mot riktiga kunder. Jag utvecklade bland annat en B2B-applikation som lät kunden sänka sina
+            omkostnader avsevärt genom att undvika betydligt dyrare tredjepartslösningar. Företaget fokuserade på
+            e-handel, vilket innebar ett stort fokus på att skapa attraktiva och funktionella gränssnitt som de ofta
+            nogräknade kunderna ville realisera. Detta lärde mig vikten av att möta kundernas behov, men också att
+            värdera när mål är praktiskt genomförbara och att kunna förmedla detta på ett tydligt sätt.
+          </p>
+          <p>
+            Något jag tog med mig från praktiken var nyttan av att använda AI, specifikt Claude integrerat i min
+            kodeditor, för att programmera så effektivt som möjligt. Ju mer jag lät AI:n hantera rutinartade delar,
+            desto tydligare blev det att mitt eget ansvar för systemarkitektur, planering och helhet växte – vilket i
+            sin tur stärkte min förståelse för hur stabil mjukvara är uppbyggd. Jag innehar även Shopifys certifiering i
+            Development Fundamentals (januari 2026).
+          </p>
+          <p>
+            Innan min IT-karriär arbetade jag i över tio år som glasmästare. Det har gett mig en stark förmåga att arbeta
+            metodiskt, noggrant och under press – egenskaper jag tar med mig in i varje kodprojekt.
+          </p>
+          <p>
+            Som person är jag eftertänksam, fokuserad och driven av en stor nyfikenhet. På fritiden läser jag gärna
+            böcker om kultur och historia, reser för att upptäcka gamla städer eller följer sport och film på tv. En
+            växande del av min tid går dessutom åt till att utveckla egna appar, där jag skapar idéer som gör det
+            möjligt för mig att kombinera mina intressen för kultur och historia med den digitala världen.
+          </p>
+          <p>
+            Jag är självständig och lösningsorienterad, men trivs lika bra med att samarbeta i team och är alltid öppen
+            för feedback. Tack för att ni överväger min ansökan. Jag ser fram emot möjligheten att få presentera mig
+            närmare.
+          </p>
+          <div class="cover-letter-signoff">
+            <p>Vänliga hälsningar,</p>
+            <p><strong>Rasmus Hanzén</strong></p>
+            <p class="cover-letter-meta">
+              <a href="mailto:rasmus.hanzen@gmail.com">rasmus.hanzen@gmail.com</a>
+              ·
+              <a href="tel:+46725564574">072-556 45 74</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

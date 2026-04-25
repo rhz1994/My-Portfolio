@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#34251a" />
+    <meta name="robots" content="index, follow" />
+    <title>Rasmus Hanzén — CV</title>
+    <link id="app-favicon" rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any" />
+    <script>
+      (function () {
+        var el = document.getElementById('app-favicon');
+        if (!el) return;
+        var path = location.pathname;
+        var last = path.split('/').pop() || '';
+        var looksLikeFile = /\.[a-z0-9]{1,8}$/i.test(last);
+        var base = location.href;
+        if (!path.endsWith('/') && !looksLikeFile) {
+          base = location.origin + path + '/' + location.search + location.hash;
+        }
+        el.setAttribute('href', new URL('assets/favicon.svg', base).href);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cv-page.css" />
+    <script data-goatcounter="https://rhz1994.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </head>
+  <body class="cv-standalone-page">
+    <main class="cv-standalone-main">
+      <div class="cv-top-bar">
+        <a class="cv-back" href="index.html#cv">Till portfolio</a>
+        <a class="btn btn-primary" href="assets/cv.pdf?v=20260416" download>Ladda ner</a>
+      </div>
+
+      <article class="cv-sheet doc-panel">
+        <header class="cv-header">
+          <h1 class="cv-name">Rasmus Hanzén</h1>
+          <p class="cv-role">Fullstack Javascriptutvecklare</p>
+          <p class="cv-lead">
+            Lugn och självständig person som uppskattar idrott, resor, kultur och läsning. Aktiv ishockey- och
+            fotbollsspelare på korpnivå.
+          </p>
+        </header>
+
+        <div class="cv-grid">
+          <div class="cv-col-main">
+            <section class="cv-block" aria-labelledby="cv-exp-heading">
+              <h2 id="cv-exp-heading">Erfarenhet</h2>
+
+              <article class="cv-entry">
+                <p class="cv-entry-meta">2025 – 2026</p>
+                <h3>WallmanderCo</h3>
+                <p class="cv-org">LIA – Praktik: Shopify-utvecklare</p>
+                <p>
+                  Praktiken genomfördes i två perioder: sju veckor höst 2025 (v.35–42) och hela vårterminen 2026
+                  (v.2–21). Fick ta stort ansvar för egna projekt direkt mot riktiga kunder – från planering och
+                  arkitektur till leverans. Huvudfokus på Shopify-utveckling: temaanpassning i Liquid, skräddarsydda
+                  Shopify-appar och integrationer mot Shopify API. Tillämpade hela teknikstacken – databas och backend
+                  (Node.js/Express), REST-API:er och frontend i React. Arbetade även med Docker, GDPR-anpassning,
+                  prestandaoptimering och testning.
+                </p>
+                <div class="cv-tags">
+                  <span class="tag">Shopify</span>
+                  <span class="tag">Liquid</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">GDPR</span>
+                </div>
+              </article>
+
+              <article class="cv-entry">
+                <p class="cv-entry-meta">2024 – 2026</p>
+                <h3>IT-Högskolan</h3>
+                <p class="cv-org">Utbildning: Fullstack Javascript</p>
+                <p>
+                  Tvåårig yrkesutbildning med fokus på modern webbutveckling. Täcker HTML/CSS, JavaScript, Vue.js,
+                  React, Node.js, Express, SQL, TypeScript, Git och Scrum. Inkluderar backend- och serverutveckling samt
+                  UX-process.
+                </p>
+                <div class="cv-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JS</span>
+                  <span class="tag">Vue.js</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Scrum</span>
+                </div>
+              </article>
+
+              <article class="cv-entry">
+                <p class="cv-entry-meta">2013 – 2025</p>
+                <h3>Älvängens Glasmästeri</h3>
+                <p class="cv-org">Glasmästare</p>
+                <p>
+                  Lång yrkeserfarenhet inom ett yrke som kräver hög precision, noggrannhet och god planeringsförmåga.
+                  Stärkte min förmåga att arbeta självständigt och i lag.
+                </p>
+              </article>
+
+              <article class="cv-entry">
+                <p class="cv-entry-meta">2015 – 2018</p>
+                <h3>Göteborgs Universitet</h3>
+                <p class="cv-org">Utbildning: Kulturarvsstudier</p>
+                <p>
+                  Kandidatexamen som stärkte min analytiska förmåga. Inkluderar ett digitalt projekt för arkeologisk
+                  dokumentation åt det svenska institutet i Rom.
+                </p>
+              </article>
+            </section>
+          </div>
+
+          <aside class="cv-col-aside">
+            <section class="cv-block" aria-labelledby="cv-contact-heading">
+              <h2 id="cv-contact-heading">Kontakt</h2>
+              <ul class="cv-aside-list">
+                <li>
+                  <strong>Telefon</strong>
+                  <a href="tel:+46725564574">072-556 45 74</a>
+                </li>
+                <li>
+                  <strong>E-post</strong>
+                  <a href="mailto:rasmus.hanzen@gmail.com">rasmus.hanzen@gmail.com</a>
+                </li>
+                <li>
+                  <strong>Ort</strong>
+                  Trollhättan
+                </li>
+              </ul>
+            </section>
+
+            <section class="cv-block" aria-labelledby="cv-edu-heading">
+              <h2 id="cv-edu-heading">Utbildning</h2>
+              <ul class="cv-aside-list">
+                <li>
+                  <strong>2024 – 2026</strong>
+                  Fullstack Javascript — IT-Högskolan
+                </li>
+                <li>
+                  <strong>2015 – 2018</strong>
+                  Kulturarvsstudier — Göteborgs Universitet
+                </li>
+              </ul>
+            </section>
+
+            <section class="cv-block" aria-labelledby="cv-skills-heading">
+              <h2 id="cv-skills-heading">Kunskaper</h2>
+              <div class="cv-tags">
+                <span class="tag">HTML / CSS</span>
+                <span class="tag">JavaScript / TypeScript</span>
+                <span class="tag">React / Vue.js</span>
+                <span class="tag">Node.js / Express</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Git / Scrum</span>
+                <span class="tag">Shopify &amp; Liquid</span>
+                <span class="tag">Docker</span>
+                <span class="tag">PaaS</span>
+                <span class="tag">GDPR</span>
+                <span class="tag">UX-design</span>
+              </div>
+            </section>
+
+            <section class="cv-block" aria-labelledby="cv-cert-heading">
+              <h2 id="cv-cert-heading">Certifikat</h2>
+              <p class="cv-org">Shopify Development Fundamentals</p>
+              <p class="cv-cert-dates">Jan 2026 – Jan 2028</p>
+            </section>
+
+            <section class="cv-block" aria-labelledby="cv-lang-heading">
+              <h2 id="cv-lang-heading">Språk</h2>
+              <ul class="cv-aside-list">
+                <li>Svenska</li>
+                <li>Engelska</li>
+              </ul>
+            </section>
+
+            <section class="cv-block" aria-labelledby="cv-ref-heading">
+              <h2 id="cv-ref-heading">Referens</h2>
+              <ul class="cv-aside-list">
+                <li>
+                  <strong>Sepideh Halvarsson</strong>
+                  Utbildningsledare – Frontend &amp; Javascript, IT-Högskolan
+                </li>
+                <li>
+                  <a href="tel:+46766661653">076-666 16 53</a>
+                </li>
+                <li>
+                  <a href="mailto:sepideh.halvarsson@iths.se">sepideh.halvarsson@iths.se</a>
+                </li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

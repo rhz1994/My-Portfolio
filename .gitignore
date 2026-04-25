@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+node_modules/
+
+# Utkast / dubbletter — sidan använder assets/cv.pdf och assets/personligt-brev.pdf
+*.docx
+/Rasmus_Hanzen_CV.pdf

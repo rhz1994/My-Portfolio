@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <!-- SEO / delning: bas-URL används i canonical, og:url m.m. Uppdatera om du publicerar på annan domän. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#34251a" />
+    <meta name="author" content="Rasmus Hanzén" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Rasmus Hanzén — fullstack- och Shopify-utvecklare. Utvalda GitHub-projekt, Shopify-case, CV, personligt brev och kontakt."
+    />
+    <title>Rasmus Hanzén</title>
+    <link rel="canonical" href="https://rhz1994.github.io/My-Portfolio/" />
+    <link rel="alternate" hreflang="sv" href="https://rhz1994.github.io/My-Portfolio/" />
+    <link rel="alternate" hreflang="en" href="https://rhz1994.github.io/My-Portfolio/" />
+    <link rel="alternate" hreflang="x-default" href="https://rhz1994.github.io/My-Portfolio/" />
+    <link id="app-favicon" rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any" />
+    <script>
+      (function () {
+        var el = document.getElementById('app-favicon');
+        if (!el) return;
+        var path = location.pathname;
+        var last = path.split('/').pop() || '';
+        var looksLikeFile = /\.[a-z0-9]{1,8}$/i.test(last);
+        var base = location.href;
+        if (!path.endsWith('/') && !looksLikeFile) {
+          base = location.origin + path + '/' + location.search + location.hash;
+        }
+        el.setAttribute('href', new URL('assets/favicon.svg', base).href);
+      })();
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rasmus Hanzén" />
+    <meta property="og:url" content="https://rhz1994.github.io/My-Portfolio/" />
+    <meta id="meta-og-locale" property="og:locale" content="sv_SE" />
+    <meta id="meta-og-locale-alt" property="og:locale:alternate" content="en_US" />
+    <meta id="meta-og-title" property="og:title" content="Rasmus Hanzén" />
+    <meta
+      id="meta-og-description"
+      property="og:description"
+      content="Rasmus Hanzén — fullstack- och Shopify-utvecklare. Utvalda GitHub-projekt, Shopify-case, CV, personligt brev och kontakt."
+    />
+    <meta
+      property="og:image"
+      content="https://rhz1994.github.io/My-Portfolio/screenshots/skillscombined.png"
+    />
+    <meta
+      id="meta-og-image-alt"
+      property="og:image:alt"
+      content="Rasmus Hanzén — utdrag ur portfolio och Shopify-arbete"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta id="meta-twitter-title" name="twitter:title" content="Rasmus Hanzén" />
+    <meta
+      id="meta-twitter-description"
+      name="twitter:description"
+      content="Rasmus Hanzén — fullstack- och Shopify-utvecklare. Utvalda GitHub-projekt, Shopify-case, CV, personligt brev och kontakt."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rhz1994.github.io/My-Portfolio/screenshots/skillscombined.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rasmus Hanzén",
+        "url": "https://rhz1994.github.io/My-Portfolio/",
+        "email": "mailto:rasmus.hanzen@gmail.com",
+        "sameAs": [
+          "https://github.com/rhz1994",
+          "https://www.linkedin.com/in/rasmus-hanz%C3%A9n-550158316/"
+        ],
+        "jobTitle": "Fullstack- och Shopify-utvecklare",
+        "knowsAbout": ["JavaScript", "TypeScript", "React", "Vue", "Node.js", "Shopify", "PostgreSQL"],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "IT-Högskolan"
+        }
+      }
+    </script>
+    <script data-goatcounter="https://rhz1994.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#hem">Rasmus Hanzén</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          data-i18n="nav.menu"
+        >
+          Meny
+        </button>
+        <nav class="nav" id="site-nav" data-i18n-attr="aria-label:nav.aria" aria-label="Huvudmeny">
+          <ul class="nav-list">
+            <li><a href="#arbete" data-i18n="nav.home">Hem</a></li>
+            <li><a href="#projekt" data-i18n="nav.projects">Egna projekt</a></li>
+            <li><a href="#shopify" data-i18n="nav.shopify">Shopify</a></li>
+            <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
+            <li><a href="#personligt-brev" data-i18n="nav.cover">Personligt brev</a></li>
+            <li><a href="#kontakt" data-i18n="nav.contact">Kontakt</a></li>
+            <li class="nav-lang" role="group" data-i18n-attr="aria-label:nav.langHint" aria-label="Byt språk">
+              <button type="button" class="lang-btn" data-set-lang="sv" aria-pressed="true">SV</button>
+              <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hem">
+        <h1 data-i18n-html="hero.h1">
+          Hej — Mitt namn är <span class="hero-accent">Rasmus Hanzén</span>.
+        </h1>
+        <p class="tagline" data-i18n-html="hero.tagline">
+          Fullstack- och Shopify-utvecklare (JavaScript/TypeScript, React, Vue, Node). Studerar vid IT-Högskolan med
+          examen 2026. Här finns utvalda projekt från GitHub, Shopify-case, CV och kontakt.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projekt" data-i18n="hero.ctaProjects">Se projekt</a>
+          <a class="btn btn-ghost" href="https://github.com/rhz1994" rel="noopener noreferrer" data-i18n="hero.github"
+            >GitHub</a
+          >
+          <a class="btn btn-ghost" href="#cv" data-i18n="hero.cv">CV</a>
+        </div>
+      </section>
+
+      <section class="section section-work" id="arbete">
+        <div
+          class="work-tabs"
+          role="tablist"
+          data-i18n-attr="aria-label:nav.workTabsAria"
+          aria-label="Växla mellan projekt och Shopify"
+        >
+          <button
+            type="button"
+            class="work-tab"
+            role="tab"
+            id="tab-work-projects"
+            aria-controls="projekt"
+            aria-selected="true"
+            data-work-tab="projects"
+            data-i18n="nav.projects"
+          >
+            Egna projekt
+          </button>
+          <button
+            type="button"
+            class="work-tab"
+            role="tab"
+            id="tab-work-shopify"
+            aria-controls="shopify"
+            aria-selected="false"
+            tabindex="-1"
+            data-work-tab="shopify"
+            data-i18n="nav.shopify"
+          >
+            Shopify
+          </button>
+        </div>
+        <div
+          id="projekt"
+          class="work-tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-work-projects"
+        >
+        <h2 class="section-title" data-i18n="projects.title">Egna projekt</h2>
+        <p class="section-lead" id="projects-lead">Laddar projekt från GitHub …</p>
+        <div id="project-grid" class="project-grid" aria-live="polite"></div>
+        </div>
+
+        <div
+          id="shopify"
+          class="work-tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-work-shopify"
+          hidden
+        >
+        <h2 class="section-title" data-i18n="shopify.title">Shopify</h2>
+        <p class="section-lead" data-i18n="shopify.lead">
+          Urval av Shopify-arbete: storefront med tema, Liquid och metafält, GraphQL mot externa API:er, samt en
+          inbäddad B2B-app i Admin för grossistflöden.
+        </p>
+        <div
+          class="credly-badge-block"
+          role="group"
+          data-i18n-attr="aria-label:shopify.credlyBlockAria"
+          aria-label="Verifierad Shopify-kompetens via Credly"
+        >
+          <a
+            class="credly-badge-hit"
+            href="https://www.credly.com/badges/eee3a74d-0bf8-46ab-9bfc-409c118352aa/public_url"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-labelledby="credly-badge-heading"
+          >
+            <img
+              class="credly-badge-hit__logo"
+              src="assets/shopify-mark.svg"
+              width="32"
+              height="32"
+              alt=""
+              decoding="async"
+              data-i18n-attr="alt:shopify.credlyLogoAlt"
+            />
+            <img
+              class="credly-badge-hit__badge"
+              src="assets/shopify-verified-skill.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              data-i18n-attr="alt:shopify.credlyImgAlt"
+            />
+          </a>
+          <div class="credly-badge-copy">
+            <h3 class="credly-badge-title" id="credly-badge-heading" data-i18n="shopify.credlyTitle">
+              Verifierad kompetens
+            </h3>
+            <p class="credly-badge-lead" data-i18n="shopify.credlyLead">
+              Shopify Development Fundamentals — verifierad kunskapsbadge via Credly.
+            </p>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article class="card card--shopify-card">
+            <div class="card-eyebrow">
+              <span class="eyebrow-pill" data-i18n="shopify.appPill">Shopify-app</span>
+            </div>
+            <div class="card-project-media">
+              <div class="app-carousel" data-app-carousel></div>
+            </div>
+            <h3 data-i18n="shopify.appTitle">B2B-app</h3>
+            <p data-i18n-html="shopify.appBody">
+              Egen lösning med <strong>PostgreSQL</strong>, <strong>TypeScript</strong> och React Router 7,
+              <strong>Liquid</strong>, moms och valutor — inbäddad B2B-app i Admin.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Shopify App</span>
+              <span class="tag">Embedded</span>
+              <span class="tag">B2B</span>
+              <span class="tag">Liquid</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">React Router 7</span>
+            </div>
+            <p class="card-footnote" data-i18n="shopify.appFootnote">
+              Ingen publik App Store- eller installationslänk ännu; bilderna ovan är från appen i Shopify Admin
+              (B2B/grossist).
+            </p>
+          </article>
+          <article class="card card--shopify-card" data-visit-site="https://skillscombined.se">
+            <div class="card-eyebrow">
+              <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
+            </div>
+            <div class="card-project-media">
+              <div
+                class="app-carousel"
+                data-app-carousel
+                data-carousel-base="screenshots/"
+                data-carousel-files="skillscombined.png,skillscombined-2.png,skillscombined-3.png"
+                data-carousel-i18n-prefix="shopify"
+                data-carousel-first-alt-i18n="shopify.skillsCarouselImgAlt"
+              ></div>
+            </div>
+            <h3 data-i18n="shopify.skillsTitle">Skills Combined</h3>
+            <p data-i18n="shopify.skillsDesc">
+              Shopify-butik för varumärket Skills Combined (makeup och hudvård): blogg och storefront, skräddarsydd
+              bundle-lösning så lagret kunde skriva ut korrekta etiketter. Tema, Liquid och kopplingar i Node/GraphQL.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Shopify</span>
+              <span class="tag">Liquid</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Express</span>
+            </div>
+            <div class="card-links">
+              <a href="https://skillscombined.se" target="_blank" rel="noopener noreferrer"
+                >skillscombined.se</a
+              >
+            </div>
+          </article>
+          <article class="card card--shopify-card" data-visit-site="https://finelittleday.com">
+            <div class="card-eyebrow">
+              <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
+            </div>
+            <div class="card-project-media">
+              <div
+                class="app-carousel"
+                data-app-carousel
+                data-carousel-base="screenshots/"
+                data-carousel-files="finelittleday.png,finelittleday-2.png,finelittleday-3.png"
+                data-carousel-i18n-prefix="shopify"
+                data-carousel-first-alt-i18n="shopify.fldCarouselImgAlt"
+              ></div>
+            </div>
+            <h3 data-i18n="shopify.fldTitle">Fine Little Day</h3>
+            <p data-i18n="shopify.fldDesc">
+              Butik för livsstilsvarumärket: mega- och mobilmeny, produkter, kommande sidor och flerspråkigt innehåll i
+              temat.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Shopify</span>
+              <span class="tag">Liquid</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="card-links">
+              <a href="https://finelittleday.com" target="_blank" rel="noopener noreferrer"
+                >finelittleday.com</a
+              >
+            </div>
+          </article>
+          <article class="card card--shopify-card" data-visit-site="https://hannainst.se/sv-se">
+            <div class="card-eyebrow">
+              <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
+            </div>
+            <div class="card-project-media">
+              <div
+                class="app-carousel"
+                data-app-carousel
+                data-carousel-base="screenshots/"
+                data-carousel-files="hannainst.png,hannainst-2.png,hannainst-3.png"
+                data-carousel-i18n-prefix="shopify"
+                data-carousel-first-alt-i18n="shopify.hannaCarouselImgAlt"
+              ></div>
+            </div>
+            <h3 data-i18n="shopify.hannaTitle">Hanna Instruments</h3>
+            <p data-i18n="shopify.hannaDesc">
+              Backend: Shopify GraphQL med integration mot API:et för den tidigare e-handelslösningen — produktdata och
+              migrering.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Shopify</span>
+              <span class="tag">Liquid</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+            </div>
+            <div class="card-links">
+              <a href="https://hannainst.se/sv-se" target="_blank" rel="noopener noreferrer"
+                >hannainst.se</a
+              >
+            </div>
+          </article>
+          <article class="card card--shopify-card" data-visit-site="https://www.gronagardar.se">
+            <div class="card-eyebrow">
+              <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
+            </div>
+            <div class="card-project-media">
+              <div
+                class="app-carousel"
+                data-app-carousel
+                data-carousel-base="screenshots/"
+                data-carousel-files="gronagardar-1.png,gronagardar-2.png,grona-gardar-3.png"
+                data-carousel-i18n-prefix="shopify"
+                data-carousel-first-alt-i18n="shopify.gronagardarCarouselImgAlt"
+              ></div>
+            </div>
+            <h3 data-i18n="shopify.gronagardarTitle">Gröna gårdar</h3>
+            <p data-i18n="shopify.gronagardarDesc">
+              Shopify-butik för ekologiskt gräsbeteskött och mathantverk från Västsverige: produktpresentation,
+              köttlådor och beställningsflöde i temat.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Shopify</span>
+              <span class="tag">Liquid</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="card-links">
+              <a href="https://www.gronagardar.se" target="_blank" rel="noopener noreferrer"
+                >gronagardar.se</a
+              >
+            </div>
+          </article>
+        </div>
+        </div>
+      </section>
+
+      <section class="section section-doc-pair">
+        <div class="doc-pair-grid">
+          <div id="cv" class="doc-pair-col">
+            <h2 class="section-title" data-i18n="cv.title">CV</h2>
+            <div class="doc-panel">
+              <div class="doc-embed-wrap">
+                <iframe
+                  id="cv-pdf-frame"
+                  class="doc-embed"
+                  title="CV"
+                  data-i18n-attr="title:cv.embedTitle"
+                  src="assets/cv.pdf?v=20260416#view=FitH"
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="doc-actions">
+
+                <a class="btn btn-ghost" href="cv.html" data-i18n="cv.web">Öppna</a><a class="btn btn-primary" href="assets/cv.pdf?v=20260416" download data-i18n="cv.download">Ladda ner</a>
+              </div>
+            </div>
+          </div>
+          <div id="personligt-brev" class="doc-pair-col">
+            <h2 class="section-title" data-i18n="cover.title">Personligt brev</h2>
+            <div class="doc-panel">
+              <div id="cover-embed-wrap" class="doc-embed-wrap">
+                <iframe
+                  id="cover-pdf-frame"
+                  class="doc-embed"
+                  title="Personligt brev"
+                  hidden
+                  data-i18n-attr="title:cover.embedTitle"
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <p id="cover-pdf-missing" class="section-note doc-missing-note" hidden data-i18n-html="cover.missing">
+                PDF-förhandsvisning visas när <code>assets/personligt-brev.pdf</code> finns med i publiceringen. Du kan
+                alltid läsa brevet via knappen <strong>Öppna</strong>.
+              </p>
+              <div class="doc-actions">
+                <a class="btn btn-primary" href="personligt-brev.html" data-i18n="cover.web">Öppna</a>
+                <a
+                  id="cover-download"
+                  class="btn btn-ghost"
+                  href="assets/personligt-brev.pdf"
+                  download
+                  hidden
+                  data-i18n="cover.download"
+                  >Ladda ner</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt">
+        <h2 class="section-title" data-i18n="contact.title">Kontakt</h2>
+        <p class="section-lead" data-i18n-html="contact.lead">
+          Hör gärna av dig via mejl eller LinkedIn. Öppen kod finns på GitHub nedan.
+        </p>
+        <div class="doc-panel">
+          <p>
+            <strong>E-post:</strong>
+            <a href="mailto:rasmus.hanzen@gmail.com">rasmus.hanzen@gmail.com</a>
+          </p>
+          <p>
+            <strong data-i18n="contact.linkedin">LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/rasmus-hanz%C3%A9n-550158316/"
+              rel="noopener noreferrer"
+              data-i18n="contact.linkedinLink"
+              >LinkedIn-profil</a
+            >
+          </p>
+          <p>
+            <strong data-i18n="contact.github">GitHub:</strong>
+            <a href="https://github.com/rhz1994" rel="noopener noreferrer">github.com/rhz1994</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="image-modal"
+      class="image-modal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="image-modal-title"
+    >
+      <div class="image-modal-backdrop" data-image-modal-close aria-hidden="true"></div>
+      <div class="image-modal-panel">
+        <header class="image-modal-header">
+          <h2 id="image-modal-title" class="image-modal-title" data-i18n="modal.title">Bild i full storlek</h2>
+          <div class="image-modal-actions">
+            <a
+              id="image-modal-site"
+              class="btn btn-ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+              data-i18n="modal.visitSite"
+              >Besök webbplatsen</a>
+            <button
+              type="button"
+              class="image-modal-close"
+              data-image-modal-close
+              data-i18n-attr="aria-label:modal.close"
+              aria-label="Stäng"
+            >
+              ×
+            </button>
+          </div>
+        </header>
+        <div class="image-modal-body">
+          <button
+            type="button"
+            id="image-modal-prev"
+            class="image-modal-gallery-fab image-modal-gallery-fab--prev"
+            hidden
+            data-i18n-attr="aria-label:modal.galleryPrev"
+            aria-label="Föregående bild"
+            data-image-modal-prev
+          >
+            <span aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </span>
+          </button>
+          <img id="image-modal-img" alt="" data-i18n-attr="alt:modal.previewImgAlt" />
+          <button
+            type="button"
+            id="image-modal-next"
+            class="image-modal-gallery-fab image-modal-gallery-fab--next"
+            hidden
+            data-i18n-attr="aria-label:modal.galleryNext"
+            aria-label="Nästa bild"
+            data-image-modal-next
+          >
+            <span aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </span>
+          </button>
+          <span id="image-modal-gallery-counter" class="image-modal-gallery-counter" hidden aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p data-i18n="footer">© 2026 Rasmus Hanzén</p>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/image-modal.js"></script>
+    <script src="js/app-carousel.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

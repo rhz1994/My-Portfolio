@@ -1,0 +1,278 @@
+/* Standalone CV page — fonts & palette from styles.css */
+
+.cv-standalone-page .cv-standalone-main {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 4rem;
+}
+
+.cv-top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cv-back {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius);
+  background: rgba(250, 246, 240, 0.06);
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.cv-back:hover {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent-soft) 50%, var(--border));
+  text-decoration: none;
+}
+
+.cv-sheet.doc-panel {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 1.75rem 2.25rem;
+}
+
+.cv-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid var(--border-on-light);
+}
+
+.cv-name {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-on-light);
+  line-height: 1.15;
+}
+
+.cv-role {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--link-on-light);
+  letter-spacing: 0.02em;
+}
+
+.cv-lead {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--muted-on-light);
+}
+
+.cv-grid {
+  display: grid;
+  gap: 2rem 2.25rem;
+}
+
+@media (min-width: 48rem) {
+  .cv-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: start;
+  }
+}
+
+.cv-col-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.cv-col-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cv-block h2 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-on-light);
+}
+
+.cv-block p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--muted-on-light);
+  line-height: 1.62;
+}
+
+.cv-block p:last-child {
+  margin-bottom: 0;
+}
+
+.cv-entry {
+  margin-bottom: 1.35rem;
+}
+
+.cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+.cv-entry-meta {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-on-light);
+}
+
+.cv-entry h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-on-light);
+}
+
+.cv-entry .cv-org {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--link-on-light);
+}
+
+.cv-block h2 + .cv-org {
+  margin-top: 0;
+}
+
+.cv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.cv-aside-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted-on-light);
+}
+
+.cv-aside-list li {
+  margin-bottom: 0.35rem;
+}
+
+.cv-aside-list strong {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-on-light);
+  margin-bottom: 0.15rem;
+}
+
+.cv-aside-list a {
+  color: var(--link-on-light);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.cv-aside-list a:hover {
+  color: var(--accent-ink);
+}
+
+.cv-cert-dates {
+  font-size: 0.88rem;
+  color: var(--muted-on-light);
+  margin-top: 0.25rem;
+}
+
+@media print {
+  .cv-top-bar {
+    display: none;
+  }
+
+  .cv-standalone-page {
+    background: var(--surface-light) !important;
+    background-image: none !important;
+  }
+
+  .cv-standalone-page .cv-standalone-main {
+    padding: 0;
+    max-width: none;
+  }
+
+  .cv-sheet.doc-panel {
+    box-shadow: none;
+    border: 1px solid var(--border-on-light);
+    max-width: none;
+    padding: 1.25rem 1.5rem;
+  }
+
+  a {
+    color: var(--text-on-light) !important;
+    text-decoration: none;
+  }
+
+  .cv-tags .tag {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+/* Personligt brev (personligt-brev.html) */
+.cover-letter-doc-head {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--border-on-light);
+}
+
+.cover-letter-top {
+  margin: 0.5rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted-on-light);
+}
+
+.cover-letter-body {
+  font-size: 0.98rem;
+  line-height: 1.68;
+  color: var(--muted-on-light);
+}
+
+.cover-letter-body p {
+  margin: 0 0 1rem;
+}
+
+.cover-letter-body p:last-child {
+  margin-bottom: 0;
+}
+
+.cover-letter-body .cover-salutation {
+  margin-bottom: 0.9rem;
+  font-weight: 600;
+  color: var(--text-on-light);
+}
+
+.cover-letter-signoff {
+  margin-top: 1.65rem;
+}
+
+.cover-letter-meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+}
