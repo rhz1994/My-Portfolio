@@ -120,6 +120,43 @@
 })();
 
 (function () {
+  if (!window.IntersectionObserver) return;
+
+  var revealObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  function observeRevealEl(el) {
+    revealObserver.observe(el);
+  }
+
+  document.querySelectorAll(".reveal").forEach(observeRevealEl);
+
+  if (window.MutationObserver) {
+    new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        m.addedNodes.forEach(function (node) {
+          if (node.nodeType !== 1) return;
+          if (node.classList && node.classList.contains("reveal")) {
+            observeRevealEl(node);
+          }
+          if (node.querySelectorAll) {
+            node.querySelectorAll(".reveal").forEach(observeRevealEl);
+          }
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+})();
+
+(function () {
   var frame = document.getElementById("cover-pdf-frame");
   var missing = document.getElementById("cover-pdf-missing");
   var wrap = document.getElementById("cover-embed-wrap");

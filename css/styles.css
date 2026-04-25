@@ -288,12 +288,45 @@ main {
   padding: 4rem 0 2.5rem;
   min-height: 42vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
   max-width: var(--max);
 }
 
-.hero::before {
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-portrait {
+  flex-shrink: 0;
+}
+
+.hero-portrait img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .hero-portrait img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.hero-content::before {
   content: "";
   display: block;
   width: 2.75rem;
@@ -1382,6 +1415,7 @@ main {
 
   .nav.is-open {
     display: block;
+    animation: slideDown 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .nav-list {
@@ -1418,5 +1452,59 @@ main {
     color: var(--link-on-light);
     border-color: var(--accent-soft);
     background: #faf6ef;
+  }
+}
+
+/* === Animations === */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-portrait {
+  animation: fadeUp 0.7s 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.work-tab-panel:not([hidden]) {
+  animation: fadeIn 0.25s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero-portrait,
+  .reveal,
+  .work-tab-panel:not([hidden]) {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

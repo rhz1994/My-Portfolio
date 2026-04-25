@@ -124,25 +124,30 @@
 
     <main>
       <section class="hero" id="hem">
-        <h1 data-i18n-html="hero.h1">
-          Hej — Mitt namn är <span class="hero-accent">Rasmus Hanzén</span>.
-        </h1>
-        <p class="tagline" data-i18n-html="hero.tagline">
-          Fullstack- och Shopify-utvecklare (JavaScript/TypeScript, React, Vue, Node). Studerar vid IT-Högskolan med
-          examen 2026. Här finns utvalda projekt från GitHub, Shopify-case, CV och kontakt.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projekt" data-i18n="hero.ctaProjects">Se projekt</a>
-          <a class="btn btn-ghost" href="https://github.com/rhz1994" rel="noopener noreferrer" data-i18n="hero.github"
-            >GitHub</a
-          >
-          <a class="btn btn-ghost" href="#cv" data-i18n="hero.cv">CV</a>
+        <div class="hero-content">
+          <h1 data-i18n-html="hero.h1">
+            Hej — Mitt namn är <span class="hero-accent">Rasmus Hanzén</span>.
+          </h1>
+          <p class="tagline" data-i18n-html="hero.tagline">
+            Fullstack- och Shopify-utvecklare (JavaScript/TypeScript, React, Vue, Node). Studerar vid IT-Högskolan med
+            examen 2026. Här finns utvalda projekt från GitHub, Shopify-case, CV och kontakt.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projekt" data-i18n="hero.ctaProjects">Se projekt</a>
+            <a class="btn btn-ghost" href="https://github.com/rhz1994" rel="noopener noreferrer" data-i18n="hero.github"
+              >GitHub</a
+            >
+            <a class="btn btn-ghost" href="#cv" data-i18n="hero.cv">CV</a>
+          </div>
+        </div>
+        <div class="hero-portrait">
+          <img src="assets/profilephoto.webp" alt="Rasmus Hanzén" />
         </div>
       </section>
 
       <section class="section section-work" id="arbete">
         <div
-          class="work-tabs"
+          class="work-tabs reveal"
           role="tablist"
           data-i18n-attr="aria-label:nav.workTabsAria"
           aria-label="Växla mellan projekt och Shopify"
@@ -179,8 +184,8 @@
           role="tabpanel"
           aria-labelledby="tab-work-projects"
         >
-        <h2 class="section-title" data-i18n="projects.title">Egna projekt</h2>
-        <p class="section-lead" id="projects-lead">Laddar projekt från GitHub …</p>
+        <h2 class="section-title reveal" data-i18n="projects.title">Egna projekt</h2>
+        <p class="section-lead reveal" style="--reveal-delay:0.08s" id="projects-lead">Laddar projekt från GitHub …</p>
         <div id="project-grid" class="project-grid" aria-live="polite"></div>
         </div>
 
@@ -191,13 +196,13 @@
           aria-labelledby="tab-work-shopify"
           hidden
         >
-        <h2 class="section-title" data-i18n="shopify.title">Shopify</h2>
-        <p class="section-lead" data-i18n="shopify.lead">
+        <h2 class="section-title reveal" data-i18n="shopify.title">Shopify</h2>
+        <p class="section-lead reveal" style="--reveal-delay:0.08s" data-i18n="shopify.lead">
           Urval av Shopify-arbete: storefront med tema, Liquid och metafält, GraphQL mot externa API:er, samt en
           inbäddad B2B-app i Admin för grossistflöden.
         </p>
         <div
-          class="credly-badge-block"
+          class="credly-badge-block reveal" style="--reveal-delay:0.14s"
           role="group"
           data-i18n-attr="aria-label:shopify.credlyBlockAria"
           aria-label="Verifierad Shopify-kompetens via Credly"
@@ -237,7 +242,7 @@
           </div>
         </div>
         <div class="project-grid">
-          <article class="card card--shopify-card">
+          <article class="card card--shopify-card reveal">
             <div class="card-eyebrow">
               <span class="eyebrow-pill" data-i18n="shopify.appPill">Shopify-app</span>
             </div>
@@ -266,7 +271,7 @@
               (B2B/grossist).
             </p>
           </article>
-          <article class="card card--shopify-card" data-visit-site="https://skillscombined.se">
+          <article class="card card--shopify-card reveal" style="--reveal-delay:0.06s" data-visit-site="https://skillscombined.se">
             <div class="card-eyebrow">
               <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
             </div>
@@ -299,7 +304,7 @@
               >
             </div>
           </article>
-          <article class="card card--shopify-card" data-visit-site="https://finelittleday.com">
+          <article class="card card--shopify-card reveal" style="--reveal-delay:0.12s" data-visit-site="https://finelittleday.com">
             <div class="card-eyebrow">
               <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
             </div>
@@ -329,7 +334,7 @@
               >
             </div>
           </article>
-          <article class="card card--shopify-card" data-visit-site="https://hannainst.se/sv-se">
+          <article class="card card--shopify-card reveal" style="--reveal-delay:0.18s" data-visit-site="https://hannainst.se/sv-se">
             <div class="card-eyebrow">
               <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
             </div>
@@ -362,7 +367,7 @@
               >
             </div>
           </article>
-          <article class="card card--shopify-card" data-visit-site="https://www.gronagardar.se">
+          <article class="card card--shopify-card reveal" style="--reveal-delay:0.24s" data-visit-site="https://www.gronagardar.se">
             <div class="card-eyebrow">
               <span class="eyebrow-pill eyebrow-pill--web" data-i18n="shopify.storePill">Tema & utveckling</span>
             </div>
@@ -398,7 +403,7 @@
 
       <section class="section section-doc-pair">
         <div class="doc-pair-grid">
-          <div id="cv" class="doc-pair-col">
+          <div id="cv" class="doc-pair-col reveal">
             <h2 class="section-title" data-i18n="cv.title">CV</h2>
             <div class="doc-panel">
               <div class="doc-embed-wrap">
@@ -417,7 +422,7 @@
               </div>
             </div>
           </div>
-          <div id="personligt-brev" class="doc-pair-col">
+          <div id="personligt-brev" class="doc-pair-col reveal" style="--reveal-delay:0.1s">
             <h2 class="section-title" data-i18n="cover.title">Personligt brev</h2>
             <div class="doc-panel">
               <div id="cover-embed-wrap" class="doc-embed-wrap">
@@ -452,11 +457,11 @@
       </section>
 
       <section class="section" id="kontakt">
-        <h2 class="section-title" data-i18n="contact.title">Kontakt</h2>
-        <p class="section-lead" data-i18n-html="contact.lead">
+        <h2 class="section-title reveal" data-i18n="contact.title">Kontakt</h2>
+        <p class="section-lead reveal" style="--reveal-delay:0.08s" data-i18n-html="contact.lead">
           Hör gärna av dig via mejl eller LinkedIn. Öppen kod finns på GitHub nedan.
         </p>
-        <div class="doc-panel">
+        <div class="doc-panel reveal" style="--reveal-delay:0.15s">
           <p>
             <strong>E-post:</strong>
             <a href="mailto:rasmus.hanzen@gmail.com">rasmus.hanzen@gmail.com</a>

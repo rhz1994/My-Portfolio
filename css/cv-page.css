@@ -46,6 +46,33 @@
   margin-bottom: 1.75rem;
   padding-bottom: 1.35rem;
   border-bottom: 1px solid var(--border-on-light);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.cv-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-portrait {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+  border: 1px solid var(--border-on-light);
+  box-shadow: 0 4px 16px rgba(42, 33, 25, 0.12);
+}
+
+@media (max-width: 30rem) {
+  .cv-portrait {
+    width: 68px;
+    height: 68px;
+  }
 }
 
 .cv-name {
@@ -230,6 +257,13 @@
   }
 
   .cv-tags .tag {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .cv-portrait {
+    width: 68px;
+    height: 68px;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
