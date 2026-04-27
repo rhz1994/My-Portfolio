@@ -392,32 +392,12 @@ main {
   max-width: var(--max);
 }
 
-.hero-content {
-  flex: 1;
-  min-width: 0;
-  transform: translate3d(var(--hero-x, 0px), var(--hero-y, 0px), 0);
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 @media (max-width: 640px) {
   .hero {
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 1.5rem;
   }
-}
-
-.hero-content::before {
-  content: "";
-  display: block;
-  width: 2.75rem;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--accent-soft) 85%, transparent),
-    transparent
-  );
-  margin-bottom: 1.75rem;
 }
 
 .hero h1 {
@@ -1873,7 +1853,6 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-content,
   .hero-accent,
   .reveal,
   .work-tab-panel:not([hidden]) {
