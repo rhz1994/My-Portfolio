@@ -30,6 +30,7 @@
         ctaProjects: "Se projekt",
         github: "GitHub",
         cv: "CV",
+        ctaContact: "Boka intro",
       },
       projects: {
         title: "Egna projekt",
@@ -49,8 +50,7 @@
       },
       shopify: {
         title: "Shopify",
-        lead:
-          "Urval av Shopify-arbete: storefront med tema, Liquid och metafält, GraphQL mot externa API:er, samt en inbäddad B2B-app i Admin för grossistflöden.",
+        lead: "Urval av Shopify-arbete: storefront med tema, Liquid och metafält, GraphQL mot externa API:er, samt en inbäddad B2B-app i Admin för grossistflöden.",
         skillsAria: "Öppna skillscombined.se i ny flik (förhandsvisning)",
         skillsTitle: "Skills Combined",
         skillsDesc:
@@ -65,13 +65,17 @@
         appPill: "Shopify-app",
         storePill: "Tema & utveckling",
         appImgAlt: "Förhandsvisning: appvy i Shopify Admin (instrumentpanel)",
-        skillsCarouselImgAlt: "Förhandsvisning: Skills Combined — storefront och bundleflöde",
-        fldCarouselImgAlt: "Förhandsvisning: Fine Little Day — butik och navigation",
-        hannaCarouselImgAlt: "Förhandsvisning: Hanna Instruments — Shopify och produktdata",
+        skillsCarouselImgAlt:
+          "Förhandsvisning: Skills Combined — storefront och bundleflöde",
+        fldCarouselImgAlt:
+          "Förhandsvisning: Fine Little Day — butik och navigation",
+        hannaCarouselImgAlt:
+          "Förhandsvisning: Hanna Instruments — Shopify och produktdata",
         gronagardarTitle: "Gröna gårdar",
         gronagardarDesc:
           "Shopify-butik för ekologiskt gräsbeteskött och mathantverk från Västsverige: produktpresentation, köttlådor och beställningsflöde i temat.",
-        gronagardarCarouselImgAlt: "Förhandsvisning: Gröna gårdar — storefront och produkter",
+        gronagardarCarouselImgAlt:
+          "Förhandsvisning: Gröna gårdar — storefront och produkter",
         appCarouselRegion: "Bildspel med skärmdumpar",
         appCarouselPrev: "Föregående bild",
         appCarouselNext: "Nästa bild",
@@ -85,7 +89,8 @@
         credlyTitle: "Verifierad kompetens",
         credlyLead:
           "Shopify Development Fundamentals — verifierad kunskapsbadge (Credly), utgiven av Shopify.",
-        credlyImgAlt: "Shopify Development Fundamentals — verifierad skill-badge (Credly)",
+        credlyImgAlt:
+          "Shopify Development Fundamentals — verifierad skill-badge (Credly)",
         credlyLogoAlt: "Shopify",
       },
       cv: {
@@ -146,9 +151,11 @@
         h1: 'Hello — my name is <span class="hero-accent">Rasmus Hanzén</span>.',
         tagline:
           "Full-stack and Shopify developer (JavaScript/TypeScript, React, Vue, Node). Studying at IT-Högskolan, Sweden, graduating in 2026. Selected GitHub projects, Shopify work, CV and contact below.",
+
         ctaProjects: "View projects",
         github: "GitHub",
         cv: "CV",
+        ctaContact: "Book intro",
       },
       projects: {
         title: "Projects",
@@ -168,8 +175,7 @@
       },
       shopify: {
         title: "Shopify",
-        lead:
-          "Selected Shopify work: storefront themes, Liquid and metafields, GraphQL to external APIs, plus an embedded B2B app in Admin for wholesale workflows.",
+        lead: "Selected Shopify work: storefront themes, Liquid and metafields, GraphQL to external APIs, plus an embedded B2B app in Admin for wholesale workflows.",
         skillsAria: "Open skillscombined.se in a new tab (preview)",
         skillsTitle: "Skills Combined",
         skillsDesc:
@@ -184,13 +190,16 @@
         appPill: "Shopify app",
         storePill: "Theme & development",
         appImgAlt: "Preview: app view in Shopify Admin (dashboard)",
-        skillsCarouselImgAlt: "Preview: Skills Combined — storefront and bundle flow",
+        skillsCarouselImgAlt:
+          "Preview: Skills Combined — storefront and bundle flow",
         fldCarouselImgAlt: "Preview: Fine Little Day — store and navigation",
-        hannaCarouselImgAlt: "Preview: Hanna Instruments — Shopify and product data",
+        hannaCarouselImgAlt:
+          "Preview: Hanna Instruments — Shopify and product data",
         gronagardarTitle: "Gröna gårdar",
         gronagardarDesc:
           "Shopify store for organic grass-fed meat and produce from West Sweden: product pages, meat boxes, and checkout in the theme.",
-        gronagardarCarouselImgAlt: "Preview: Gröna gårdar — storefront and products",
+        gronagardarCarouselImgAlt:
+          "Preview: Gröna gårdar — storefront and products",
         appCarouselRegion: "Slideshow with screenshots",
         appCarouselPrev: "Previous image",
         appCarouselNext: "Next image",
@@ -204,7 +213,8 @@
         credlyTitle: "Verified skills",
         credlyLead:
           "Shopify Development Fundamentals — verified skills badge (Credly), issued by Shopify.",
-        credlyImgAlt: "Shopify Development Fundamentals — verified skill badge (Credly)",
+        credlyImgAlt:
+          "Shopify Development Fundamentals — verified skill badge (Credly)",
         credlyLogoAlt: "Shopify",
       },
       cv: {
@@ -288,7 +298,8 @@
     if (twDesc) twDesc.setAttribute("content", desc);
 
     var ogImgAlt = document.getElementById("meta-og-image-alt");
-    if (ogImgAlt) ogImgAlt.setAttribute("content", deepGet(lang, "meta.ogImageAlt"));
+    if (ogImgAlt)
+      ogImgAlt.setAttribute("content", deepGet(lang, "meta.ogImageAlt"));
   }
 
   function applyDom(lang) {
@@ -336,7 +347,9 @@
     applyDom(lng);
     setActiveLangButtons(lng);
     if (!silent) {
-      document.dispatchEvent(new CustomEvent("portfolio:languagechange", { detail: { lang: lng } }));
+      document.dispatchEvent(
+        new CustomEvent("portfolio:languagechange", { detail: { lang: lng } }),
+      );
     }
   }
 
