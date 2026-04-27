@@ -372,7 +372,7 @@
     el.innerHTML = list.map(renderCard).join("");
     el.querySelectorAll(".card").forEach(function (card, i) {
       card.classList.add("reveal");
-      if (i > 0) card.style.setProperty("--reveal-delay", i * 0.06 + "s");
+      if (i > 0) card.style.setProperty("--reveal-delay", i * 0.12 + "s");
     });
     el.querySelectorAll(".card-project-media img").forEach(function (img) {
       img.addEventListener("error", function () {
