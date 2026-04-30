@@ -69,6 +69,11 @@
           "Förhandsvisning: Skills Combined — storefront och bundleflöde",
         fldCarouselImgAlt:
           "Förhandsvisning: Fine Little Day — butik och navigation",
+        snootCarouselImgAlt:
+          "Förhandsvisning: Snoot — startsida, sok och journal/collection",
+        snootTitle: "Snoot",
+        snootDesc:
+          "Shopify-store med fokus pa ren premiumkansla i design och UX: startsida, sok/collection-flode och redaktionellt innehall i temat.",
         hannaCarouselImgAlt:
           "Förhandsvisning: Hanna Instruments — Shopify och produktdata",
         gronagardarTitle: "Gröna gårdar",
@@ -193,6 +198,11 @@
         skillsCarouselImgAlt:
           "Preview: Skills Combined — storefront and bundle flow",
         fldCarouselImgAlt: "Preview: Fine Little Day — store and navigation",
+        snootCarouselImgAlt:
+          "Preview: Snoot — homepage, search and journal/collection experience",
+        snootTitle: "Snoot",
+        snootDesc:
+          "Shopify store with a clean premium feel in design and UX: homepage, search/collection flow, and editorial content in the theme.",
         hannaCarouselImgAlt:
           "Preview: Hanna Instruments — Shopify and product data",
         gronagardarTitle: "Gröna gårdar",
