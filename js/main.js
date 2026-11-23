@@ -390,7 +390,7 @@
   }
 
   function showCoverPdf() {
-    frame.src = "assets/personligt-brev.pdf#view=FitH";
+    frame.src = "assets/personligt-brev.pdf?v=20261123#view=FitH";
     frame.removeAttribute("hidden");
     missing.hidden = true;
     if (wrap) wrap.classList.remove("doc-embed-wrap--empty");
@@ -413,7 +413,7 @@
     });
   }
 
-  pdfReachable("assets/personligt-brev.pdf")
+  pdfReachable("assets/personligt-brev.pdf?v=20261123")
     .then(function (ok) {
       if (ok) showCoverPdf();
       else showMissing();
