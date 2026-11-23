@@ -50,7 +50,7 @@
       },
       shopify: {
         title: "Shopify",
-        lead: "Urval av Shopify-arbete: storefront med tema, Liquid och metafält, GraphQL mot externa API:er, samt en inbäddad B2B-app i Admin för grossistflöden.",
+        lead: "Urval av Shopify-arbete: butiker på Horizon från design till lansering, migreringar, egna appar och Shopify Functions, GraphQL mot externa API:er samt en inbäddad B2B-app i Admin.",
         skillsAria: "Öppna skillscombined.se i ny flik (förhandsvisning)",
         skillsTitle: "Skills Combined",
         skillsDesc:
@@ -73,7 +73,7 @@
           "Förhandsvisning: Snoot — startsida, sok och journal/collection",
         snootTitle: "Snoot",
         snootDesc:
-          "Shopify-store med fokus pa ren premiumkansla i design och UX: startsida, sok/collection-flode och redaktionellt innehall i temat.",
+          "Shopify-store med fokus på ren premiumkänsla i design och UX: startsida, sök/collection-flöde och redaktionellt innehåll i temat.",
         hannaCarouselImgAlt:
           "Förhandsvisning: Hanna Instruments — Shopify och produktdata",
         gronagardarTitle: "Gröna gårdar",
@@ -81,6 +81,36 @@
           "Shopify-butik för ekologiskt gräsbeteskött och mathantverk från Västsverige: produktpresentation, köttlådor och beställningsflöde i temat.",
         gronagardarCarouselImgAlt:
           "Förhandsvisning: Gröna gårdar — storefront och produkter",
+        deliveryTitle: "Leveransval – Gröna gårdar",
+        deliveryDesc:
+          "Egen Shopify-app med Theme App Extension i varukorgen: kunden anger postnummer, väljer hemleverans eller utlämningsställe och leveransdag i en kalender, och valet följer med ordern till leveranssystemet. Cirka 160 000 rader leveransdata i egen PostgreSQL-databas via App Proxy. Sedan ombyggd till en publik multi-tenant-app inför App Store.",
+        deliveryCarouselImgAlt:
+          "Förhandsvisning: leveransval i Gröna gårdars varukorg — kalender, vald dag och utlämningsställen",
+        rmpoolenTitle: "Restaurangmaskins Poolen",
+        rmpoolenDesc:
+          "Ny Shopify-butik för storköksutrustning, ny och begagnad: eget tema på Horizon från design, migrering av sortiment och kategoriträd från den tidigare plattformen med redirects, och en offertguide byggd på metaobjekt som butiken redigerar i en egen Shopify-app.",
+        rmpoolenCarouselImgAlt:
+          "Förhandsvisning: Restaurangmaskins Poolen — startsida, produktsida och offertguide",
+        specialbeslagTitle: "Specialbeslag",
+        specialbeslagDesc:
+          "Migrering från WooCommerce till Shopify för en butik med ett mycket brett sortiment av inredningsbeslag: produkter, varianter och redirects, tema på Horizon, Shopify Functions för företagsfrakt och betalsätt samt en egen app för följesedlar med hyllplats.",
+        specialbeslagCarouselImgAlt:
+          "Förhandsvisning: Specialbeslag — startsida, kategori och produktsida",
+        boarhangerTitle: "Boarhanger",
+        boarhangerDesc:
+          "Butik för en svensk bärbar vilthängare: eget tema byggt på Horizon från design, med produktsida, video, recensioner och flera marknader och valutor.",
+        boarhangerCarouselImgAlt:
+          "Förhandsvisning: Boarhanger — startsida, produktsida och produktsektion",
+        fiveseasonsTitle: "Five Seasons",
+        fiveseasonsDesc:
+          "Svenska ytterkläder för dam, herr och barn: nytt tema på Horizon från design med kategorinavigering, kampanjytor och produktsidor, på svenska och engelska.",
+        fiveseasonsCarouselImgAlt:
+          "Förhandsvisning: Five Seasons — startsida, kategorier och produktsida",
+        norrskenTitle: "Norrsken",
+        norrskenDesc:
+          "Damjackor med skandinavisk enkelhet: redaktionell startsida, produktgrid och produktsidor i ett eget tema på Horizon, på svenska och engelska med språkväljare.",
+        norrskenCarouselImgAlt:
+          "Förhandsvisning: Norrsken — startsida, produkter och produktsida",
         appCarouselRegion: "Bildspel med skärmdumpar",
         appCarouselPrev: "Föregående bild",
         appCarouselNext: "Nästa bild",
@@ -180,7 +210,7 @@
       },
       shopify: {
         title: "Shopify",
-        lead: "Selected Shopify work: storefront themes, Liquid and metafields, GraphQL to external APIs, plus an embedded B2B app in Admin for wholesale workflows.",
+        lead: "Selected Shopify work: Horizon stores from design to launch, migrations, custom apps and Shopify Functions, GraphQL to external APIs, plus an embedded B2B app in Admin.",
         skillsAria: "Open skillscombined.se in a new tab (preview)",
         skillsTitle: "Skills Combined",
         skillsDesc:
@@ -210,6 +240,36 @@
           "Shopify store for organic grass-fed meat and produce from West Sweden: product pages, meat boxes, and checkout in the theme.",
         gronagardarCarouselImgAlt:
           "Preview: Gröna gårdar — storefront and products",
+        deliveryTitle: "Delivery picker – Gröna gårdar",
+        deliveryDesc:
+          "Custom Shopify app with a Theme App Extension in the cart drawer: customers enter their postcode, pick home delivery or a pickup point and a delivery day in a calendar, and the choice follows the order to the delivery system. Around 160,000 rows of delivery data in its own PostgreSQL database via App Proxy. Later rebuilt as a public multi-tenant app ahead of App Store review.",
+        deliveryCarouselImgAlt:
+          "Preview: delivery picker in Gröna gårdar's cart — calendar, selected day and pickup points",
+        rmpoolenTitle: "Restaurangmaskins Poolen",
+        rmpoolenDesc:
+          "New Shopify store for professional kitchen equipment, new and used: custom Horizon theme from design, migration of the catalogue and category tree from the previous platform with redirects, and a quote guide built on metaobjects that the store edits in its own Shopify app.",
+        rmpoolenCarouselImgAlt:
+          "Preview: Restaurangmaskins Poolen — homepage, product page and quote guide",
+        specialbeslagTitle: "Specialbeslag",
+        specialbeslagDesc:
+          "Migration from WooCommerce to Shopify for a store with a very wide range of furniture and door hardware: products, variants and redirects, a Horizon theme, Shopify Functions for business shipping and payment methods, and a custom app for packing slips with shelf locations.",
+        specialbeslagCarouselImgAlt:
+          "Preview: Specialbeslag — homepage, category and product page",
+        boarhangerTitle: "Boarhanger",
+        boarhangerDesc:
+          "Store for a Swedish portable game hanger: custom theme built on Horizon from design, with product page, video, reviews and multiple markets and currencies.",
+        boarhangerCarouselImgAlt:
+          "Preview: Boarhanger — homepage, product page and product section",
+        fiveseasonsTitle: "Five Seasons",
+        fiveseasonsDesc:
+          "Swedish outerwear for women, men and kids: new Horizon theme from design with category navigation, campaign areas and product pages, in Swedish and English.",
+        fiveseasonsCarouselImgAlt:
+          "Preview: Five Seasons — homepage, categories and product page",
+        norrskenTitle: "Norrsken",
+        norrskenDesc:
+          "Women's jackets with Scandinavian simplicity: editorial homepage, product grid and product pages in a custom Horizon theme, in Swedish and English with a language selector.",
+        norrskenCarouselImgAlt:
+          "Preview: Norrsken — homepage, products and product page",
         appCarouselRegion: "Slideshow with screenshots",
         appCarouselPrev: "Previous image",
         appCarouselNext: "Next image",

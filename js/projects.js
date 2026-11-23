@@ -44,6 +44,8 @@
     "vite-render-full": true,
     "fullstack-ish": true,
     group12: true,
+    /** Visas som kort under Shopify (leveransval för Gröna gårdar). */
+    "delivery-public": true,
   };
 
   /** Efter datum-sortering: dessa repo-namn flyttas sist (ordning inom svansen enligt listan). */
